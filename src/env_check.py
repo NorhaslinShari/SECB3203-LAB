@@ -7,12 +7,22 @@ PACKAGES = ("numpy", "pandas", "matplotlib", "scikit-learn", "biopython", "pytes
 
 def package_version(name: str) -> str | None:
     """Return the installed version of a package, or None if it is missing."""
-    raise NotImplementedError("TODO: implement package_version")
+    try:
+        return metadata.version(name)
+    except metadata.PackageNotFoundError:
+        return None
 
 
 def check_environment(packages: tuple[str, ...] = PACKAGES) -> dict:
     """Return the Python version, operating system and package versions."""
-    raise NotImplementedError("TODO: implement check_environment")
+    return {
+        "python": platform.python_version(), #call function
+        "platform": platform.system(),
+        "packages": {
+            package: package_version(package)
+            for package in packages
+        },
+    }
 
 
 if __name__ == "__main__":
