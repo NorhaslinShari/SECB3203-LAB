@@ -1,15 +1,28 @@
 # SECB3203 Lab 1 - Python fundamentals and a reproducible project
 
-Student: <name, matric no>
+Student: <NORHASLIN BINTI SHARI, A24CS0149>
 
 ## Setup
-<Write the exact commands that create and activate the virtual environment and install requirements.txt. Give the Windows command as well as the Linux/macOS one.>
+<USING VS CODE
+- python -m venv .venv
+- dir (to check if .venv is exist in right place)
+- .\.venv\Scripts\python.exe -m pip install -r requirements.txt (i cannot run if using syntax in docs, so ask copilot what suitable command to put)
+- .\.venv\Scripts\activate.bat (i activate later because i forgot to activate)
+- .\.venv\Scripts\python.exe -m pip freeze > requirements-frozen.tx
+- dir requirements-frozen.txt (to check if requirements-frozen.txt exist)>
 
 ## Run
-<Write the exact commands that run the tests, the style check and the environment report.>
+<Write 
+- python -m pytest
+- ruff check src
+- python src/env_check.py > results/environment_report.txt >
 
 ## What is in this repository
-<One line for each of src/, tests/, data/, results/ and each file you wrote.>
+<src/ - basics.py,env_check.py
+- tests/ - test_visible.py
+- data/ - qc_records.csv
+- results/ - .gitkeep
+- .gitignore, AI_USE_LOG.md, pytest.ini, README.md,requirements-frozen.txt, requirements.txt >
 
 ## What is not committed, and why
-<Two sentences in your own words: which folders are ignored by Git and what could go wrong if they were committed.>
+<.venv/ folder contains (local virtual enviroment) which is can be recreated on another computer. Besides, results/folder is function to generetaed output files that can be recreated too when the project run.>
