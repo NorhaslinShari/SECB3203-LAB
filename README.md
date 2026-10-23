@@ -20,7 +20,7 @@ USING VS CODE
 - src/ - basics.py,env_check.py
 - tests/ - test_visible.py
 - data/ - qc_records.csv
-- results/ - .gitkeep
+- results/ - .gitkeep, environement_report.txt
 - .gitignore, AI_USE_LOG.md, pytest.ini, README.md,requirements-frozen.txt, requirements.txt
 
 ## What is not committed, and why
