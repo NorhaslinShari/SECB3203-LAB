@@ -1,6 +1,6 @@
 # SECB3203 Lab 1 - Python fundamentals and a reproducible project
 
-Student: <NORHASLIN BINTI SHARI, A24CS0149>
+Student: NORHASLIN BINTI SHARI, A24CS0149
 
 ## Setup
 USING VS CODE
@@ -14,14 +14,14 @@ USING VS CODE
 ## Run
 - python -m pytest
 - ruff check src
-- python src/env_check.py > results/environment_report.txt >
+- python src/env_check.py > results/environment_report.txt 
 
 ## What is in this repository
 - src/ - basics.py,env_check.py
 - tests/ - test_visible.py
 - data/ - qc_records.csv
 - results/ - .gitkeep
-- .gitignore, AI_USE_LOG.md, pytest.ini, README.md,requirements-frozen.txt, requirements.txt >
+- .gitignore, AI_USE_LOG.md, pytest.ini, README.md,requirements-frozen.txt, requirements.txt
 
 ## What is not committed, and why
-.venv/ folder contains (local virtual enviroment) which can be recreated on another computer. Besides, results/folder is function to generetaed output files that can be recreated too when the project run.
+.venv/ folder because contains (local virtual enviroment) which can be recreated on another computer. Besides, results/folder is function to generetaed output files that can be recreated too when the project run.
