@@ -1,7 +1,7 @@
 import pytest
 
-from basics import format_report, gc_percent, parse_counts
-from env_check import check_environment
+from Lab01.src.basics import format_report, gc_percent, parse_counts
+from Lab01.src.env_check import check_environment
 
 
 def test_report_has_python_platform_and_packages():

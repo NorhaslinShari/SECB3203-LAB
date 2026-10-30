@@ -1,6 +1,6 @@
 import pytest
 
-from basics import  gc_percent, parse_counts
+from Lab01.src.basics import  gc_percent, parse_counts
 
 def test_all_gc():
     """Boundary case: all bases are G and C."""
