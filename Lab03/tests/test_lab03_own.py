@@ -7,5 +7,5 @@ def test_classify_read_boundary2():
     assert classify_read(499, 10, 50.0) == "reject"
    
 def test_trim_low_quality():
-    assert trim_low_quality([30, 32, 35, 12, 10]) == 3
+    assert trim_low_quality([30, 32, 35, 12, 10]) == 3 
     
