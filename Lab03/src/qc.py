@@ -46,4 +46,4 @@ def trim_low_quality(quals: list[int], threshold: int = 20) -> int:
     while end > 0 and quals[end - 1] < threshold:    # only keep bases more than or equal to threshold
         end = end - 1
 
-    return end 
+    return end
