@@ -7,7 +7,7 @@
    - quals (quality score)
    - thresohold (20)
 
- - Output 
+ - Output
  
  classify_read function will returns one of these three decisions:
    - "reject"
