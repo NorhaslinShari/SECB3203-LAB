@@ -60,7 +60,7 @@ def find_motif(sequence: str, motif: str) -> list[int]:
     if len(motif) > len(sequence):
         return []
 
-    result = []
+    position = []
     start = 0
 
     while True: 
@@ -69,10 +69,10 @@ def find_motif(sequence: str, motif: str) -> list[int]:
         if pos == -1:
             break
 
-        result.append(pos)
-        start += 1
+        position.append(pos)
+        start = pos + 1
 
-    return result
+    return position
 
 
 if __name__ == "__main__":
