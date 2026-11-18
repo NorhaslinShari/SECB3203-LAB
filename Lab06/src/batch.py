@@ -11,7 +11,7 @@ LOG = logging.getLogger("batch")
 
 
 class FastqFormatError(ValueError):
-    """Raised when a FASTQ file is malformed."""
+    """Raised when a FASTQ file is malformed.""" 
 
 
 def process_directory(in_dir, out_csv, log_path=None) -> dict[str, int]:
