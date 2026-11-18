@@ -1,7 +1,7 @@
 """Week 6 - reading FASTA and CSV safely."""
 import csv
 from collections.abc import Iterator
-from pathlib import Path
+from pathlib import Path 
 
 
 class FastaFormatError(ValueError):
