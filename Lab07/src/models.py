@@ -85,15 +85,19 @@ class BiologicalSample:
         }
     
 
-
 class SampleCollection:
     """An ordered collection of samples with unique ids."""
 
     def __init__(self):
-        raise NotImplementedError("TODO: implement __init__")
+        self._samples: list[BiologicalSample] = []
 
     def add(self, sample: BiologicalSample) -> None:
-        raise NotImplementedError("TODO: implement add")
+        if any(s.sample_id == sample.sample_id
+               for s in self._samples):
+            raise ValueError(
+                f"duplicate sample id: {sample.sample_id!r}")
+        self._samples.append(sample)
+
 
     def __len__(self) -> int:
         raise NotImplementedError("TODO: implement __len__")
