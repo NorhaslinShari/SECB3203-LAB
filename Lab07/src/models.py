@@ -83,7 +83,7 @@ class BiologicalSample:
             "gc_percent": round(self.dna.gc_content(), 2),
             **self._results,
         }
-")
+    
 
 
 class SampleCollection:
