@@ -100,10 +100,10 @@ class SampleCollection:
 
 
     def __len__(self) -> int:
-        raise NotImplementedError("TODO: implement __len__")
+        return len(self._samples)
 
     def __iter__(self):
-        raise NotImplementedError("TODO: implement __iter__")
+        return iter(self._samples)
 
     def by_group(self, group: str) -> list[BiologicalSample]:
         raise NotImplementedError("TODO: implement by_group")
