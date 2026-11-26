@@ -68,15 +68,22 @@ class BiologicalSample:
 
 
     def add_result(self, name: str, value) -> None:
-        raise NotImplementedError("TODO: implement add_result")
+        self.results[name] = value
 
     @property
     def results(self) -> dict:
         """A copy, so callers cannot change the stored results by accident."""
-        raise NotImplementedError("TODO: implement results")
+        return dict(self._results)
 
     def to_dict(self) -> dict:
-        raise NotImplementedError("TODO: implement to_dict")
+        return {
+            "sample_id": self.sample_id,
+            "group": self.group,
+            "length": len(self.dna),
+            "gc_percent": round(self.dna.gc_content(), 2),
+            **self._results,
+        }
+")
 
 
 class SampleCollection:
