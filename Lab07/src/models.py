@@ -41,7 +41,7 @@ class DNASequence:
 
     def __repr__(self) -> str:
         return (f"DNASequence (name={self._name!r}, " 
-                f"sequence={self._sequence!r}")
+                f"sequence={self._sequence!r})")
 
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, DNASequence):
@@ -68,7 +68,7 @@ class BiologicalSample:
 
 
     def add_result(self, name: str, value) -> None:
-        self.results[name] = value
+        self._results[name] = value
 
     @property
     def results(self) -> dict:
