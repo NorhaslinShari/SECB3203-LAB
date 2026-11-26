@@ -44,10 +44,15 @@ class DNASequence:
                 f"sequence={self._sequence!r}")
 
     def __eq__(self, other: object) -> bool:
-        raise NotImplementedError("TODO: implement __eq__")
+        if not isinstance(other, DNASequence):
+            return NotImplemented
+        return (self._name, self._sequence) == (
+            other._name, other._sequence)
+
 
     def __hash__(self) -> int:
-        raise NotImplementedError("TODO: implement __hash__")
+        return hash((self._name, self._sequence))
+
 
 
 class BiologicalSample:
