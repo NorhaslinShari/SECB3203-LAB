@@ -25,7 +25,7 @@ class DNASequence:
 
     @property
     def sequence(self) -> str:
-        raise NotImplementedError("TODO: implement sequence")
+        return self._sequence
 
     def gc_content(self) -> float:
         raise NotImplementedError("TODO: implement gc_content")
