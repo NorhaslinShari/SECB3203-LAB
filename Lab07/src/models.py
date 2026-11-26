@@ -6,7 +6,13 @@ class DNASequence:
     """A validated, read-only DNA sequence with a name."""
 
     def __init__(self, name: str, sequence: str):
-        raise NotImplementedError("TODO: implement __init__")
+        sequence = sequence.upper()
+        if not is_valid_dna(sequence):
+            raise ValueError(
+                f"invalid DNA sequence for {name!r}: {sequence!r}")
+        self._name = name
+        self._sequence = sequence
+
 
     @classmethod
     def from_fasta_record(cls, record_id: str, sequence: str) -> "DNASequence":
