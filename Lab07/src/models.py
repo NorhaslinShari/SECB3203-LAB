@@ -21,7 +21,7 @@ class DNASequence:
 
     @property
     def name(self) -> str:
-        raise NotImplementedError("TODO: implement name")
+        return self._name
 
     @property
     def sequence(self) -> str:
