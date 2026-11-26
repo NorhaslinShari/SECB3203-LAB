@@ -28,7 +28,7 @@ class DNASequence:
         return self._sequence
 
     def gc_content(self) -> float:
-        raise NotImplementedError("TODO: implement gc_content")
+        return gc_content(self._sequence)
 
     def reverse_complement(self) -> "DNASequence":
         raise NotImplementedError("TODO: implement reverse_complement")
