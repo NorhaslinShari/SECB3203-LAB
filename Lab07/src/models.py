@@ -40,12 +40,12 @@ class DNASequence:
         return len(self._sequence)
 
     def __repr__(self) -> str:
-        return (f"DNASequence (name={self._name!r}, " 
+        return (f"DNASequence(name={self._name!r}, " 
                 f"sequence={self._sequence!r})")
 
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, DNASequence):
-            return NotImplemented
+            return False
         return (self._name, self._sequence) == (
             other._name, other._sequence)
 
