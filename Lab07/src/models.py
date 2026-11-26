@@ -17,7 +17,7 @@ class DNASequence:
     @classmethod
     def from_fasta_record(cls, record_id: str, sequence: str) -> "DNASequence":
         """Build an object from a (record_id, sequence) pair such as read_fasta yields."""
-        raise NotImplementedError("TODO: implement from_fasta_record")
+        return cls(record_id, sequence)
 
     @property
     def name(self) -> str:
