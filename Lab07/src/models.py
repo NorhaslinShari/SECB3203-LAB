@@ -34,7 +34,7 @@ class DNASequence:
         return DNASequence(f"{self._name}_rc", reverse_complement(self._sequence))
 
     def find_motif(self, motif: str) -> list[int]:
-        raise NotImplementedError("TODO: implement find_motif")
+        return find_motif(self._sequence, motif)
 
     def __len__(self) -> int:
         raise NotImplementedError("TODO: implement __len__")
