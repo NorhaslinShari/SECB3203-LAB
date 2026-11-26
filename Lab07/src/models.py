@@ -1,0 +1,84 @@
+"""Week 7 - classes for biological sequences and samples."""
+from sequence_utils import find_motif, gc_content, is_valid_dna, reverse_complement
+
+
+class DNASequence:
+    """A validated, read-only DNA sequence with a name."""
+
+    def __init__(self, name: str, sequence: str):
+        raise NotImplementedError("TODO: implement __init__")
+
+    @classmethod
+    def from_fasta_record(cls, record_id: str, sequence: str) -> "DNASequence":
+        """Build an object from a (record_id, sequence) pair such as read_fasta yields."""
+        raise NotImplementedError("TODO: implement from_fasta_record")
+
+    @property
+    def name(self) -> str:
+        raise NotImplementedError("TODO: implement name")
+
+    @property
+    def sequence(self) -> str:
+        raise NotImplementedError("TODO: implement sequence")
+
+    def gc_content(self) -> float:
+        raise NotImplementedError("TODO: implement gc_content")
+
+    def reverse_complement(self) -> "DNASequence":
+        raise NotImplementedError("TODO: implement reverse_complement")
+
+    def find_motif(self, motif: str) -> list[int]:
+        raise NotImplementedError("TODO: implement find_motif")
+
+    def __len__(self) -> int:
+        raise NotImplementedError("TODO: implement __len__")
+
+    def __repr__(self) -> str:
+        raise NotImplementedError("TODO: implement __repr__")
+
+    def __eq__(self, other: object) -> bool:
+        raise NotImplementedError("TODO: implement __eq__")
+
+    def __hash__(self) -> int:
+        raise NotImplementedError("TODO: implement __hash__")
+
+
+class BiologicalSample:
+    """Sample metadata plus a validated sequence and analysis results (composition)."""
+
+    def __init__(self, sample_id: str, group: str, dna: DNASequence):
+        raise NotImplementedError("TODO: implement __init__")
+
+    def add_result(self, name: str, value) -> None:
+        raise NotImplementedError("TODO: implement add_result")
+
+    @property
+    def results(self) -> dict:
+        """A copy, so callers cannot change the stored results by accident."""
+        raise NotImplementedError("TODO: implement results")
+
+    def to_dict(self) -> dict:
+        raise NotImplementedError("TODO: implement to_dict")
+
+
+class SampleCollection:
+    """An ordered collection of samples with unique ids."""
+
+    def __init__(self):
+        raise NotImplementedError("TODO: implement __init__")
+
+    def add(self, sample: BiologicalSample) -> None:
+        raise NotImplementedError("TODO: implement add")
+
+    def __len__(self) -> int:
+        raise NotImplementedError("TODO: implement __len__")
+
+    def __iter__(self):
+        raise NotImplementedError("TODO: implement __iter__")
+
+    def by_group(self, group: str) -> list[BiologicalSample]:
+        raise NotImplementedError("TODO: implement by_group")
+
+    def summary(self) -> dict[str, int]:
+        """Number of samples per group, sorted by group name."""
+        raise NotImplementedError("TODO: implement summary")
