@@ -37,10 +37,11 @@ class DNASequence:
         return find_motif(self._sequence, motif)
 
     def __len__(self) -> int:
-        raise NotImplementedError("TODO: implement __len__")
+        return len(self._sequence)
 
     def __repr__(self) -> str:
-        raise NotImplementedError("TODO: implement __repr__")
+        return (f"DNASequence (name={self._name!r}, " 
+                f"sequence={self._sequence!r}")
 
     def __eq__(self, other: object) -> bool:
         raise NotImplementedError("TODO: implement __eq__")
