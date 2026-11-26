@@ -106,8 +106,13 @@ class SampleCollection:
         return iter(self._samples)
 
     def by_group(self, group: str) -> list[BiologicalSample]:
-        raise NotImplementedError("TODO: implement by_group")
+      return [s for s in self._samples if s.group == group]
+  
 
     def summary(self) -> dict[str, int]:
         """Number of samples per group, sorted by group name."""
-        raise NotImplementedError("TODO: implement summary")
+        counts: dict[str, int] = {}
+        for sample in self._samples:
+            counts[sample.group] = counts.get(sample.group, 0) + 1
+        return dict(sorted(counts.items()))
+
