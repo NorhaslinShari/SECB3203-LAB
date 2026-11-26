@@ -59,7 +59,13 @@ class BiologicalSample:
     """Sample metadata plus a validated sequence and analysis results (composition)."""
 
     def __init__(self, sample_id: str, group: str, dna: DNASequence):
-        raise NotImplementedError("TODO: implement __init__")
+        if not isinstance(dna, DNASequence):
+            raise TypeError("dna must be a DNASequence")
+        self.sample_id = sample_id
+        self.group = group
+        self.dna = dna
+        self._results: dict = {}
+
 
     def add_result(self, name: str, value) -> None:
         raise NotImplementedError("TODO: implement add_result")
