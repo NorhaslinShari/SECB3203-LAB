@@ -21,6 +21,7 @@ def test_reverse_complement_name():
     rc = dna.reverse_complement()
 
     assert rc.name == "seq1_rc"
+    assert rc.sequence == "GCAT"
         
         
         
