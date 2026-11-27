@@ -1,7 +1,6 @@
 # SECB3203 Lab 7 - Object-oriented programming
 
-Student: <name, matric no>
-
+Student: NORHASLIN BINTI SHARI , A24CS0149
 ## Setup
     python -m venv .venv
     source .venv/bin/activate        # Windows: .venv\Scripts\activate
