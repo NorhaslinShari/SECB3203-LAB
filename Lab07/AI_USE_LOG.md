@@ -56,8 +56,8 @@ DNASequence("seq1", "GCAT")
 instead of
 DNASequence("seq1_rc", "GCAT")
 Look at the implementation.
-- Verified by: <How you checked it: ran pytest, read the docs, compared with data, asked lecturer>
-- My change: <What you accepted, rejected or rewrote, and why>
-- Used in: <File and function, or report section, where it ended up (or 'not used')>
+- Verified by: i ran with pytest
+- My change: change the test code with AI recommend 
+- Used in: test_lab07_models
 
 <!-- Copy the whole 'Entry' block for each extra interaction: ## Entry 2, ## Entry 3 ... -->

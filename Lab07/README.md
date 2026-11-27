@@ -14,7 +14,7 @@ Student: NORHASLIN BINTI SHARI , A24CS0149
 - `src/models.py` : DNASequence, BiologicalSample and SampleCollection (my code)
 - `src/sequence_utils.py` : given, complete (Week 5 module). Do not edit it.
 - `tests/` : visible tests and my own tests (`test_lab07_models.py`)
-- `AI_USE_LOG.md` : my AI prompt log (or nil return)
+- `AI_USE_LOG.md` : my AI prompt log 
 
 ## Notes
-All data are synthetic. Write here one design decision you made and why.
+ Design desicion: In models.py file, i ensured that each sample in SampleCollection must have a unique sample ID because unique IDs prevent duplicate records and make it easier to identify, retrieve, and manage biological samples accurately.
